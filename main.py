@@ -1,10 +1,10 @@
 # import turtle
-# import turtle as t
+import turtle as t
 # from turtle import *
 # import heroes
 # print(heroes.gen())
 
-from turtle import Turtle, Screen
+# from turtle import Turtle, Screen, turtle
 import random
 
 # def move_right():
@@ -24,7 +24,15 @@ import random
 # def movePenUp():
 #     timy.penup()
 #     timy.forward(10)
-lineColor = ["plum", "olive", "salmon", "orange"]
+t.colormode(255)
+def random_colors():
+    r = random.randint(0,255)
+    g = random.randint(0,255)
+    b = random.randint(0,255)
+    rColor = (r,g,b)
+    return rColor
+
+# lineColor = ["plum", "olive", "salmon", "orange"]
 
 
 # def moveRight(angel):
@@ -38,13 +46,13 @@ lineColor = ["plum", "olive", "salmon", "orange"]
 #         moveRight(total_angel/sides)
 direction = [0, 90,180, 270]
 
-timy = Turtle()
+timy = t.Turtle()
 timy.shape("turtle")
 timy.pensize(5)
 timy.speed("fast")
 for _ in range(100):
     turtle_direction = random.choice(direction)
-    timy.pencolor(random.choice(lineColor))
+    timy.pencolor(random_colors())
     timy.forward(15)
     timy.setheading(turtle_direction)
 
@@ -60,5 +68,5 @@ for _ in range(100):
 
 
 
-screen = Screen()
+screen = t.Screen()
 screen.exitonclick()
