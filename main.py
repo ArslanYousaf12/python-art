@@ -48,12 +48,16 @@ def random_colors():
 
 timy = t.Turtle()
 timy.shape("turtle")
-timy.pensize(5)
-timy.speed("fast")
+timy.pensize(1)
+timy.speed("fastest")
 # timy.circle(90)
-for num in range(1,100,):
-    timy.circle(90)
-    timy.right(10)
+def draw_spiral(gapSize):
+    for num in range(int(360/ gapSize)):
+        timy.color(random_colors())
+        timy.circle(100)
+        timy.setheading(timy.heading() + gapSize)
+
+draw_spiral(5)
 #     turtle_direction = random.choice(direction)
 #     timy.pencolor(random_colors())
 #     timy.forward(15)
