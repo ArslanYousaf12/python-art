@@ -6,16 +6,32 @@
 
 from turtle import Turtle, Screen
 
-def move_right():
-    timy_the_turtle.right(90)
-    timy_the_turtle.forward(100)
+# def move_right():
+#     timy_the_turtle.right(90)
+#     timy_the_turtle.forward(100)
 
-timy_the_turtle = Turtle()
-timy_the_turtle.shape("turtle")
-timy_the_turtle.color("red")
-timy_the_turtle.forward(100)
-for _ in range(3):
-    move_right()
+# timy_the_turtle = Turtle()
+# timy_the_turtle.shape("turtle")
+# timy_the_turtle.color("red")
+# timy_the_turtle.forward(100)
+# for _ in range(3):
+#     move_right()
+def movePenDown():
+    timy.pendown()
+    timy.forward(10)
+
+def movePenUp():
+    timy.penup()
+    timy.forward(10)
+
+
+
+timy = Turtle()
+timy.shape("turtle")
+for _ in range(5):
+    movePenDown()
+    movePenUp()
+
     
 
 
