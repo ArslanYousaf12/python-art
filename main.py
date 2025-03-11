@@ -27,23 +27,31 @@ import random
 lineColor = ["plum", "olive", "salmon", "orange"]
 
 
-def moveRight(angel):
-    timy.forward(100)
-    timy.right(angel)
+# def moveRight(angel):
+#     timy.forward(100)
+#     timy.right(angel)
     
-def drawShape(sides):
-    for _ in range(sides):
-        penColor = random.choice(lineColor)
-        timy.pencolor(penColor)
-        moveRight(total_angel/sides)
-
+# def drawShape(sides):
+#     for _ in range(sides):
+#         penColor = random.choice(lineColor)
+#         timy.pencolor(penColor)
+#         moveRight(total_angel/sides)
+direction = [0, 90,180, 270]
 
 timy = Turtle()
 timy.shape("turtle")
-total_angel = 360
-for num in range(3, 11):
-    print(num)
-    drawShape(num)
+timy.pensize(5)
+timy.speed("fast")
+for _ in range(100):
+    turtle_direction = random.choice(direction)
+    timy.pencolor(random.choice(lineColor))
+    timy.forward(15)
+    timy.setheading(turtle_direction)
+
+# total_angel = 360
+# for num in range(3, 11):
+#     print(num)
+#     drawShape(num)
 
 
 
