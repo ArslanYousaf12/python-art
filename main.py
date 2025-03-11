@@ -44,17 +44,20 @@ def random_colors():
 #         penColor = random.choice(lineColor)
 #         timy.pencolor(penColor)
 #         moveRight(total_angel/sides)
-direction = [0, 90,180, 270]
+# direction = [0, 90,180, 270]
 
 timy = t.Turtle()
 timy.shape("turtle")
 timy.pensize(5)
 timy.speed("fast")
-for _ in range(100):
-    turtle_direction = random.choice(direction)
-    timy.pencolor(random_colors())
-    timy.forward(15)
-    timy.setheading(turtle_direction)
+# timy.circle(90)
+for num in range(1,100,):
+    timy.circle(90)
+    timy.right(10)
+#     turtle_direction = random.choice(direction)
+#     timy.pencolor(random_colors())
+#     timy.forward(15)
+#     timy.setheading(turtle_direction)
 
 # total_angel = 360
 # for num in range(3, 11):
