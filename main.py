@@ -1,79 +1,16 @@
-# import turtle
-import turtle as t
-# from turtle import *
-# import heroes
-# print(heroes.gen())
+import colorgram
 
-# from turtle import Turtle, Screen, turtle
-import random
-
-# def move_right():
-#     timy_the_turtle.right(90)
-#     timy_the_turtle.forward(100)
-
-# timy_the_turtle = Turtle()
-# timy_the_turtle.shape("turtle")
-# timy_the_turtle.color("red")
-# timy_the_turtle.forward(100)
-# for _ in range(3):
-#     move_right()
-# def movePenDown():
-#     timy.pendown()
-#     timy.forward(10)
-
-# def movePenUp():
-#     timy.penup()
-#     timy.forward(10)
-t.colormode(255)
-def random_colors():
-    r = random.randint(0,255)
-    g = random.randint(0,255)
-    b = random.randint(0,255)
-    rColor = (r,g,b)
-    return rColor
-
-# lineColor = ["plum", "olive", "salmon", "orange"]
-
-
-# def moveRight(angel):
-#     timy.forward(100)
-#     timy.right(angel)
-    
-# def drawShape(sides):
-#     for _ in range(sides):
-#         penColor = random.choice(lineColor)
-#         timy.pencolor(penColor)
-#         moveRight(total_angel/sides)
-# direction = [0, 90,180, 270]
-
-timy = t.Turtle()
-timy.shape("turtle")
-timy.pensize(1)
-timy.speed("fastest")
-# timy.circle(90)
-def draw_spiral(gapSize):
-    for num in range(int(360/ gapSize)):
-        timy.color(random_colors())
-        timy.circle(100)
-        timy.setheading(timy.heading() + gapSize)
-
-draw_spiral(5)
-#     turtle_direction = random.choice(direction)
-#     timy.pencolor(random_colors())
-#     timy.forward(15)
-#     timy.setheading(turtle_direction)
-
-# total_angel = 360
-# for num in range(3, 11):
-#     print(num)
-#     drawShape(num)
-
-
-
-        
-
-
-
-
-screen = t.Screen()
-screen.exitonclick()
+colors = colorgram.extract('image.jpg',10)
+color_list = []
+for num in range(10):
+    selected_color = colors[num]
+    rgb = selected_color.rgb
+    red = rgb.r
+    green = rgb.g
+    blue = rgb.b
+    rgb_color = (red, green, blue)
+    color_list.append(rgb_color)
+print(color_list)
+print(colors)
+# print(colors)
+print(len(colors))
